@@ -8,4 +8,10 @@ router.get("/", function (req, res, next) {
 	})
 })
 
+router.get("/:price", function (req, res, next) {
+	res.send({
+		price: req.params.price,
+	})
+})
+
 module.exports = router

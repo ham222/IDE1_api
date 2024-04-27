@@ -9,4 +9,11 @@ router.get("/", function (req, res, next) {
 	})
 })
 
+router.get("/:start-:end", function (req, res, next) {
+	res.send({
+		min_time: req.params.start,
+		max_time: req.params.end,
+	})
+})
+
 module.exports = router
